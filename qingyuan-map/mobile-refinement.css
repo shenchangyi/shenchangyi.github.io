@@ -1,0 +1,51 @@
+/* Screen-space labels: no bitmap layers or inherited map scale. */
+:root{--map-ground:#e5dfc9}
+#map-world{width:3840px;height:2048px}
+#detail-tiles{position:absolute;inset:0;pointer-events:none}
+#detail-tiles img{opacity:0;transition:opacity .18s}
+#detail-tiles img.ready{opacity:1}
+#markers{z-index:4}
+.map-marker{transform:translate(-50%,-50%);width:44px;height:44px;min-height:44px;padding:5px;display:grid;place-items:center;contain:layout;z-index:2}
+.marker-head,.marker-service .marker-head,.marker-parking .marker-head{width:32px;height:32px;border-radius:50%;transform:none;background:var(--paper-raised);color:var(--green);border:1px solid #69846d;box-shadow:0 2px 5px #1c392528;margin:0}
+.marker-head svg{width:21px;height:21px;transform:none;color:inherit;stroke-width:1.65}
+.marker-scenic .marker-head{color:#8a422f;border-color:#a96e56}
+.marker-commerce .marker-head{color:#825622;border-color:#a47d47}
+.marker-demo .marker-head{border-style:dashed}
+.marker-label{position:absolute;left:50%;top:42px;transform:translateX(-50%);font-size:11px!important;font-weight:500;line-height:23px;padding:0 7px;border-radius:3px;box-shadow:0 1px 4px #23382d26;pointer-events:none}
+.map-marker[data-side=right] .marker-label{left:43px;top:10px;transform:none}
+.map-marker[data-side=left] .marker-label{left:auto;right:43px;top:10px;transform:none}
+.map-marker[data-side=above] .marker-label{top:-21px}
+.map-marker[aria-pressed=true]{z-index:5}
+.map-marker[aria-pressed=true] .marker-head{background:var(--red);color:var(--paper);border-color:var(--paper)}
+.satellite-view .atmosphere{visibility:hidden}
+.map-tools{gap:8px;right:12px}
+.map-tools button{height:48px}
+.category-rail,.tool-group{width:48px;border-radius:8px}
+.map-tools svg{width:20px;height:20px}
+#base-toggle{position:absolute;left:14px;top:calc(var(--header-height) + var(--safe-top) + 122px);font-size:11px;width:44px;padding:6px 0;min-height:44px;z-index:12;border-radius:7px}
+.zoom-controls{display:flex;flex-direction:column;left:14px;bottom:calc(var(--nav-height) + var(--safe-bottom) + 155px);border-radius:7px}
+.zoom-controls button{height:44px;min-width:44px}
+.map-lower-controls{bottom:calc(var(--nav-height) + var(--safe-bottom) + 105px)}
+#base-toggle,.zoom-controls,.map-lower-controls{transition:opacity .16s}
+#welcome-card{padding:10px 12px;gap:10px}
+#welcome-card img{width:40px;height:40px}
+#welcome-card strong{font-family:'KaiTi',serif;font-size:18px}
+#welcome-card p{font-size:11px}
+.exploring #welcome-card{display:none}
+.exploring .map-lower-controls{bottom:calc(var(--nav-height) + var(--safe-bottom) + 27px)}
+.exploring .zoom-controls{bottom:calc(var(--nav-height) + var(--safe-bottom) + 85px)}
+.map-top-note{left:14px;box-shadow:0 1px 6px #173b3020}
+.map-top-note>span{font-size:11px}
+.map-top-note button{font-size:11px}
+.sheet-open #base-toggle{display:none}
+.clean-screen #base-toggle{display:none}
+.flight{transform-origin:center}
+.flight .bird{width:72px;height:97px;background-size:288px 97px;animation-name:wing-wide}
+.flight-three{left:44%;top:58%;animation:fly-two 68s linear infinite;animation-delay:-35s}
+.flight-three .bird{display:inline-block;margin:16px;transform:scale(.5) rotate(15deg)}
+@keyframes wing-wide{to{background-position:-288px 0}}
+.mist{width:32%;height:18%;opacity:.24;filter:blur(20px)}
+@media(min-width:700px){#base-toggle{left:auto;right:86px;top:calc(var(--header-height) + 18px)}.zoom-controls{left:auto;right:126px;bottom:184px}.map-tools{right:14px}.map-lower-controls{left:20px;bottom:110px}.exploring .zoom-controls{bottom:184px}}
+@media(max-width:360px){.map-tools{right:8px}.category-rail,.tool-group{width:44px}.map-top-note{left:10px}.map-top-note>span{padding:0 6px}.map-top-note button{padding:0 6px}}
+@media(prefers-reduced-motion:reduce){#detail-tiles img{transition:none}}
+

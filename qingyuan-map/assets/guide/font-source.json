@@ -1,0 +1,56 @@
+{
+  "family": "Qingyuan Brush",
+  "source_family": "Zhi Mang Xing",
+  "source": "https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&text=%C2%B7%E3%80%82%E4%B8%80%E4%B8%8B%E4%B8%8E%E4%B8%AD%E4%BA%95%E4%BB%8B%E5%85%88%E5%85%A5%E5%85%B1%E5%85%B3%E5%87%86%E5%88%B0%E5%8D%B7%E5%8E%9F%E5%9B%9E%E5%A0%82%E5%A2%A8%E5%A4%87%E5%A4%A9%E5%B1%8B%E5%B7%B2%E5%BA%A7%E5%BC%80%E6%80%BB%E6%85%95%E6%8E%A8%E6%92%AD%E6%94%B6%E6%96%87%E6%96%97%E6%9C%A8%E6%9D%90%E6%9D%91%E6%9D%96%E6%9D%A0%E6%9E%97%E6%9E%AB%E6%9F%B1%E6%A0%B1%E6%A1%82%E6%A1%90%E6%A2%B0%E6%A6%82%E6%AA%90%E6%AD%A3%E6%B0%B4%E6%B0%B8%E6%B1%9F%E6%B2%B3%E6%B3%A2%E6%B4%8B%E6%B4%B2%E6%B5%B7%E6%B6%A6%E6%B7%8B%E6%B8%85%E6%B8%B2%E6%B8%BC%E6%B9%96%E6%B9%9B%E7%85%A7%E7%89%87%E7%94%BB%E7%9C%8B%E7%A5%A0%E7%BA%AF%E7%BB%8D%E7%BE%8E%E8%84%89%E8%A7%88%E8%B5%B0%E8%B5%B7%E8%B7%B3%E8%BF%87%E8%BF%91%E8%BF%94%E8%BF%9B%E9%87%8D%E9%97%A8%E9%99%82%E9%9D%92%E9%A1%B6%EF%BC%8C&display=swap",
+  "font_file_source": "https://fonts.gstatic.com/l/font?kit=f0Xw0ey79sErYFtWQ9a2rq-g0ac1h-Duj3-DfdDPpY1hPCaKYM6oAm2ft62ZFRTESuzMdoMc1umKLHSps6ZMNRWzhMUWR_9fQaRTti5FhWOStdF-rD1EoZEfbWhTUTlYlkpv9HG_8RbWUd8mMZOxAyWWnfJk6hWDELJg-w8trQ2QJcmxaKfG1Qugj3HuZRRuz1UDSLmAsGASh9H-q4JznCfJ4YFxTZICxs8nJ4TbRft_maLfKP4Z0zxCO6MPKxH4eFAB5nl0Xb-m1hEh3OIT8QYzPQ-B-Yx0_xCmTe-HShmUoKx5ZRrnpDm8-RU9mDYyxbTmReVTLfGLwsXM6RxuNs1qV2QdCtihlJ4ZvE-_hBLcKlF_IQ&skey=5b1480357843eeb2&v=v19",
+  "license_file": "ZhiMangXing-OFL.txt",
+  "em": 1000,
+  "created_glyphs": [
+    {
+      "char": "渼",
+      "radical_from": "河",
+      "body_from": "美",
+      "radical_transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "body_transform": [
+        0.75,
+        0,
+        0,
+        0.9,
+        217.5,
+        15
+      ],
+      "note": "同字体轮廓构成的项目补字，不是原字库字形。"
+    },
+    {
+      "char": "栱",
+      "radical_from": "杠",
+      "body_from": "共",
+      "radical_transform": [
+        0.606,
+        0,
+        0,
+        0.96,
+        34,
+        0
+      ],
+      "body_transform": [
+        0.66,
+        0,
+        0,
+        1.1,
+        278,
+        -30
+      ],
+      "note": "同字体轮廓构成的项目补字，不是原字库字形。"
+    }
+  ],
+  "coverage_verified": true,
+  "bytes": 25732
+}
