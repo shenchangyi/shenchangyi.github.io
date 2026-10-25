@@ -241,5 +241,7 @@
       "height": 0.20414507772020726
     }
   ],
-  "registration": "Local inverse-distance image registration with identity perimeter; manual visual controls, not field survey."
+  "registration": "Local inverse-distance image registration with identity perimeter; manual visual controls, not field survey.",
+  "encoding": "lossless WebP",
+  "version": "20261025hd"
 }

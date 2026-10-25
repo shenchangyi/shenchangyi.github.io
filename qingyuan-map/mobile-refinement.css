@@ -49,3 +49,14 @@
 @media(max-width:360px){.map-tools{right:8px}.category-rail,.tool-group{width:44px}.map-top-note{left:10px}.map-top-note>span{padding:0 6px}.map-top-note button{padding:0 6px}}
 @media(prefers-reduced-motion:reduce){#detail-tiles img{transition:none}}
 
+
+/* Native device-pixel rendering keeps tiles out of the transformed compositor. */
+#atlas-canvas{position:absolute;left:0;top:0;pointer-events:none}
+.hd-rendering #map-image,.hd-rendering #compare-image,.hd-rendering #detail-tiles{visibility:hidden}
+.hd-rendering #map-world{will-change:auto}
+#route-layer{z-index:2}.atmosphere{z-index:3}
+#image-status{position:absolute;left:14px;bottom:calc(var(--nav-height) + var(--safe-bottom) + 8px);min-height:20px;padding:1px 5px;max-width:240px;font-size:10px;z-index:10;background:#faf6e8e8;border-radius:3px}
+#image-status:empty{display:none}#near-link{position:absolute;left:14px;top:calc(var(--header-height) + var(--safe-top) + 172px);z-index:12;padding:8px 7px;font-size:10px;min-height:44px;display:flex;align-items:center;text-decoration:none;border-radius:7px}
+.clean-screen #near-link,.clean-screen #image-status,.sheet-open #near-link{display:none}
+.reference-routes .setting-row{text-align:left;width:100%}
+@media(min-width:700px){#near-link{left:auto;right:86px;top:calc(var(--header-height) + 70px)}}

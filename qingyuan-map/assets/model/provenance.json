@@ -1,0 +1,18 @@
+{
+  "version": "2026-10-25",
+  "kind": "flat cartographic foundation",
+  "elevation": "none; no DEM supplied",
+  "buildings": "facades and height withheld pending survey",
+  "water": "manual image traces from existing satellite, approximate",
+  "roads": "Baidu walking references, 2026-10-25; not approved trail network",
+  "coordinates": "BD-09 planimetric normalized image coordinates; no altitude",
+  "palette": [
+    "#e9e2cd",
+    "#96b4aa",
+    "#566d5d",
+    "#e7d9b7",
+    "#a4513c"
+  ],
+  "waterPolygons": 3,
+  "routeReferences": 3
+}
