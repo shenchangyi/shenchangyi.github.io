@@ -39,7 +39,7 @@ function roofGeometry(w,d,rise){
   const y=rise*Math.pow(t,1.55)+rise*.14*Math.pow(Math.abs(s),6)*Math.pow(1-t,3)+rise*.09*Math.pow(1-t,8);
   vertices.push(x,y,z);
  }for(let v=0;v<5;v++)for(let u=0;u<12;u++){const a=start+v*13+u;if(side===1)faces.push(a,a+1,a+13,a+1,a+14,a+13);else faces.push(a,a+13,a+1,a+1,a+13,a+14);}}
- for(const side of [-1,1]){const start=vertices.length/3;vertices.push(side*w*.5,rise*.23,-d*.5,side*w*.5,rise*.23,d*.5,side*w*.32,rise,0);if(side===-1)faces.push(start,start+1,start+2);else faces.push(start,start+2,start+1);}
+ for(const side of [-1,1]){const start=vertices.length/3;for(let v=0;v<=5;v++){const t=v/5,y=rise*Math.pow(t,1.55)+rise*.14*Math.pow(1-t,3)+rise*.09*Math.pow(1-t,8);vertices.push(side*w*(.5-.18*t),y,-d*.5*(1-t),side*w*(.5-.18*t),y,d*.5*(1-t));}for(let v=0;v<5;v++){const a=start+v*2;if(side===-1)faces.push(a,a+1,a+2,a+1,a+3,a+2);else faces.push(a,a+2,a+1,a+1,a+2,a+3);}}
  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));g.setIndex(faces);g.computeVertexNormals();return g;
 }
 export function buildScene(plan){
@@ -72,8 +72,8 @@ export function buildScene(plan){
   outlined(box(w+.025,.027,d+.025,mats.stone,0,.028,0),group);
   outlined(box(w,h,d,mats.wall,0,h/2+.045,0),group);
   if(b.kind!=='flat'){
-   const roof=new THREE.Mesh(roofGeometry(w*1.17,d*1.23,h*.43),b.kind==='temple'?ink(0xb09a62,{pattern:1}):mats.roof);roof.position.y=h+.038;roof.castShadow=true;outlined(roof,group);
-   group.add(box(w*.66,.014,.013,mats.ink,0,h*1.43+.04,0));
+   const roof=new THREE.Mesh(roofGeometry(w*1.17,d*1.23,h*.43),b.kind==='temple'?ink(0xb09a62,{pattern:1}):mats.roof);roof.position.y=h+.063;roof.name='curved-roof';roof.castShadow=true;outlined(roof,group);
+   group.add(box(w*.66,.014,.013,mats.ink,0,h*1.43+.063,0));
    // Eave rafters remain separate geometry, visible in close views.
    const rafters=new THREE.Group();for(let i=-4;i<=4;i++){rafters.add(box(w*.018,.012,d*1.22,mats.wood,i*w/9,h+.031,0));}group.add(rafters);
   }else group.add(box(w*1.02,.022,d*1.02,mats.roof,0,h+.05,0));
