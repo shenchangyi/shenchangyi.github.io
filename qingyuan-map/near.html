@@ -1,9 +1,9 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>青原山 · 模型近览</title><meta name="theme-color" content="#f6f1e5"><link rel="stylesheet" href="near.css?v=20261025hd"><script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}</script></head><body>
-<header><a href="preview.html" aria-label="返回导览地图">‹ 返回画卷</a><h1>青原山<span>模型近览</span></h1><button id="help" aria-label="模型说明">说明</button></header>
-<main id="scene" aria-label="可拖动缩放的水墨地图模型"><p id="loading" role="status">正在展开山水…</p><div id="labels" aria-hidden="true"></div></main>
-<div class="top-note">地物基础模型 · 建筑待补拍</div><div class="north">北 ↑</div>
-<nav class="look-controls" aria-label="模型视角"><button id="top" aria-pressed="true">俯看</button><button id="tilt" aria-pressed="false">斜看</button><button id="texture" aria-pressed="true">画卷</button><button id="linework" aria-pressed="false">轮廓</button></nav>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>青原山 · 立体山水</title><meta name="theme-color" content="#f6f1e5"><link rel="stylesheet" href="near.css?v=20261025scene"><script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}</script></head><body>
+<header><a href="preview.html?v=20261025scene" aria-label="返回导览地图">‹ 返回画卷</a><h1>青原山<span>立体山水</span></h1><button id="help" aria-label="模型说明">说明</button></header>
+<main id="scene" aria-label="可拖动缩放的水墨三维地图"><p id="loading" role="status">正在展开立体山水…</p><div id="labels"></div></main>
+<div class="top-note">影像对位 · 立体示意</div><div class="north">北 ↑</div>
+<nav class="look-controls" aria-label="模型视角"><button id="top" aria-pressed="false">俯看</button><button id="tilt" aria-pressed="true">斜看</button><button id="rotate" aria-pressed="false">单指平移</button><button id="satellite" aria-pressed="false">卫星对照</button></nav>
 <div class="zoom"><button id="zoom-in" aria-label="放大模型">＋</button><button id="zoom-out" aria-label="缩小模型">－</button><button id="reset">全览</button></div>
-<footer><button data-focus="temple">寺前水岸</button><button data-focus="market">青原里</button><button data-focus="lake">东侧水库</button><p id="detail">双指缩放 · 单指平移 · 原画纹理有像素上限</p></footer>
-<dialog id="info"><h2>这次先建好地物基础</h2><p>道路来自留存的百度步行路径；水岸与广场轮廓依据已有影像描摹。均未现场测量。</p><p>目前是平面地物模型，没有编造山体高程和建筑高度。放大时几何轮廓保持清晰，原画纹理仍有自身的分辨率上限。</p><p>周四补拍入口、建筑各面、屋顶细节及尺度参照后，再逐处加入建筑模型。</p><p class="muted">卫星来源：项目已有百度地图影像；水墨画稿为原项目制作。</p><button id="close-info">继续近览</button></dialog>
-<script type="module" src="near.mjs?v=20261025hd"></script></body></html>
+<footer><div class="focus-buttons"><button data-focus="plaza">看铺装</button><button data-focus="temple">看屋檐</button><button data-focus="market">逛街巷</button><button data-focus="lake">观水岸</button></div><label class="route-select">参考路线<select id="route-choice"><option value="">暂不显示</option></select></label><p id="detail">单指平移 · 双指缩放 · 点选地物可近看</p></footer>
+<dialog id="info"><h2>走近一幅立体山水</h2><p>道路、水岸、广场和建筑体块按现有卫星影像对位；树木以林地区域布置。近看时显示独立屋檐、树冠、地砖与水纹几何。</p><p>建筑高度、屋檐细节、单株树位置为风格化示意，待现场照片与尺度资料校正。底面没有实测高程，不代表山地地形模型。</p><p>游线来自留存的百度步行路径，未现场核验。切换卫星可对照同一平面位置。</p><p class="muted">影像来源：项目已有百度地图影像，2026-10-22 留存。细节层通过 Three.js 绘制。</p><button id="close-info">继续近览</button></dialog>
+<script type="module" src="near-scene.mjs?v=20261025scene"></script></body></html>

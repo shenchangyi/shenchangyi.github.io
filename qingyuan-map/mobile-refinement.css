@@ -60,3 +60,16 @@
 .clean-screen #near-link,.clean-screen #image-status,.sheet-open #near-link{display:none}
 .reference-routes .setting-row{text-align:left;width:100%}
 @media(min-width:700px){#near-link{left:auto;right:86px;top:calc(var(--header-height) + 70px)}}
+
+/* Correct, complete calligraphic title and real geometry at close zoom. */
+@font-face{font-family:QingyuanTitle;src:url('assets/guide/qingyuan-title.woff2') format('woff2');font-display:swap;font-weight:400}
+.brand h1{font-family:QingyuanTitle,KaiTi,serif}
+#scene-canvas{position:absolute;inset:0;pointer-events:none;visibility:hidden}
+.geometric-detail #scene-canvas{visibility:visible}.geometric-detail #atlas-canvas{visibility:hidden}
+#route-quick{position:absolute;left:14px;top:calc(var(--header-height) + var(--safe-top) + 222px);z-index:12;padding:8px 5px;font-size:10px;min-height:44px;border-radius:7px}
+.clean-screen #route-quick,.sheet-open #route-quick{display:none}
+#route-layer{isolation:isolate}.route-stroke{stroke:#a33e2b;stroke-width:4}.route-halo{stroke:#fff9eb;stroke-width:7}.route-walk{stroke:#fff3d9;stroke-width:1.2}
+.geometric-detail #zoom-level{font-size:11px}.geometric-detail .mist{opacity:.12}
+.geometric-detail .flight .bird{transform:scale(var(--marker-inverse)) rotate(21deg);transform-origin:0 0}
+.geometric-detail .flight-three .bird{transform:scale(calc(var(--marker-inverse) * .5)) rotate(15deg)}
+@media(min-width:700px){#route-quick{left:auto;right:86px;top:calc(var(--header-height) + 122px)}}
